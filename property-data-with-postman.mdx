@@ -19,10 +19,134 @@ Here are the steps we'll take:
 
 # 1. Download Postman
 
-We recommend using Postman when accessing the Datafiniti API.  It's a great client for using any sort of RESTful API and works particularly well with Datafiniti.  You can download Postman \[here]\(<a href="https://www.postman.com/downloads/" target="_blank" rel="noopener noreferrer">[https://www.postman.com/downloads/](https://www.postman.com/downloads/)</a>).
+We recommend using Postman when accessing the Datafiniti API.  It's a great client for using any sort of RESTful API and works particularly well with Datafiniti.  You can download Postman \[here]\([<a href="https://www.postman.com/downloads/" target="_blank" rel="noopener noreferrer">https://www.postman.com/downloads/</a>](https://www.postman.com/downloads/)).
 
 # 2. Get your API token
 
 The next thing you'll need is your API token.  The API token lets you authenticate with the Datafiniti API and tells it who you are, what you have access to, and so on.  Without it, you can't use the API.
 
-To get your API token, go the \[Datafiniti Web Portal (<a href="https://portal.datafiniti.co)](https://portal.datafiniti.co/settings/api)" target="_blank" rel="noopener noreferrer">[https://portal.datafiniti.co)\](https://portal.datafiniti.co/settings/api](https://portal.datafiniti.co\)]\(https://portal.datafiniti.co/settings/api)</a><a href="https://portal.datafiniti.co)](https://portal.datafiniti.co/settings/api)" target="_blank" rel="noopener noreferrer">)</a>, login, and click your settings in the left navigation bar.  From there, you'll see a page showing your token.  Your API token will be a long string of letters and numbers.  Copy the API token or store it somewhere you can easily reference.
+To get your API token, go the \[Datafiniti Web Portal ([<a href="https://portal.datafiniti.co)](https://portal.datafiniti.co/settings/api)" target="_blank" rel="noopener noreferrer">https://portal.datafiniti.co)\](https://portal.datafiniti.co/settings/api</a>](https://portal.datafiniti.co\)]\(https://portal.datafiniti.co/settings/api)<a href="https://portal.datafiniti.co)](https://portal.datafiniti.co/settings/api)" target="_blank" rel="noopener noreferrer">)</a>, log in, and click your settings in the left navigation bar.  From there, you'll see a page showing your token.  Your API token will be a long string of letters and numbers.  Copy the API token or store it somewhere you can easily reference.
+
+<Image src="https://blob-cdn.documentation.ai/org-a829270c-4408-45aa-90cb-a8cad2967955/doc-82f0e261-4f6b-45af-9f00-b0b805bf07d2/1769548623404-sm1egty5bs-pasted-image-1769548620500.png?q=85&fm=auto&auto=compress%2Cformat" width="887" height="535" alt="" />
+
+<Callout kind="info" collapsed="false">
+  \> 📘 **API Key** \
+  For the rest of this document, we'll use `AAAXXXXXXXXXXXX` as a substitute example for your actual API token when showing example API calls.
+</Callout>
+
+<Callout kind="alert" collapsed="false">
+  **API Key Regen**
+
+  For security reasons, your API token will be automatically changed whenever you change your password.
+</Callout>
+
+# **3. Run your first search**
+
+The first thing we'll do is do a test search that will give us a sense for what sort of data might be available. Eventually, we'll refine our search so that we get back the most relevant data.
+
+Since we want homes in the US, let's try a simple search that will just give us online listings for US-based properties.
+
+With Postman open, click on the Datafiniti API V4 collection. Then navigate to Secured Endpoints > Search > Search Property Data. Click on "Body" in the main screen.
+
+Enter the following in the text area:
+
+JSON
+
+```json
+{
+  "query": "country:US",
+  "num_records": 1
+}
+
+```
+
+Click the blue "Send" button. You should get a response similar to this:
+
+```json wrap="true"
+{
+  "num_found": 7983205,
+  "total_cost": 1,
+  "records": [
+    {
+      "address": "711 Kent Ave",
+      "brokers": [
+        {
+          "agent": "Raj Singh",
+          "company": "YOUR REALTY INC.",
+          "dateSeen": [
+            "2016-06-06T18:09:28Z"
+          ],
+        }
+      ],
+      "city": "Catonsville",
+      "country": "US",
+      "dateAdded": "2016-06-06T18:09:28Z",
+      "features": [
+        {
+          "key": "Air Conditioning",
+          "value": [
+            "Heat Pumps"
+          ]
+        },
+        {
+          "key": "Sewer Type",
+          "value": [
+            "Public"
+          ]
+        }
+      ],
+      "latitude": "39.284462",
+      "listingName": "711 Kent Ave, Catonsville, Md 21228",
+      "longitude": "-76.734069",
+      "lotSizeValue": 0.16,
+      "lotSizeUnit": "Acres",
+      "mlsNumber": "BC9677283",
+      "numBathroom": 2,
+      "numBedroom": 4,
+      "postalCode": "21228",
+      "prices": [
+        {
+          "amountMax": 199900,
+          "amountMin": 199900,
+          "currency": "USD",
+          "dateSeen": [
+            "2016-08-08T00:00:00Z",
+            "2016-08-03T00:00:00Z"
+          ],
+          "type": "list sale",
+        },
+        {
+          "amountMax": 212000,
+          "amountMin": 212000,
+          "currency": "USD",
+          "dateSeen": [
+            "2016-06-06T00:00:00Z"
+          ],
+        }
+      ],
+      "propertyTaxes": [
+        {
+          "amount": 3195,
+          "currency": "USD",
+          "dateSeen": [
+            "2016-06-06T18:09:28Z"
+          ],
+        }
+      ],
+      "propertyType": "Single Family Dwelling",
+      "province": "MD",
+      "statuses": [
+        {
+          "dateSeen": [
+            "2016-08-09T09:16:10Z"
+          ],
+          "isUnderContract": "false",
+          "type": "For Sale"
+        }
+      ],
+      "id": "AV9WzHyO_RWkykBuv11F"
+    }
+  ]
+]
+```
+
