@@ -24,14 +24,13 @@
             "icon": "rocket",
             "pages": [
               {
+                "title": "Property Data with Postman",
+                "path": "property-data-with-postman"
+              },
+              {
                 "title": "Introduction",
                 "path": "introduction",
                 "icon": "home"
-              },
-              {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
               }
             ]
           },
