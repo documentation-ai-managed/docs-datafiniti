@@ -3,12 +3,12 @@
   "initialRoute": "introduction",
   "colors": {
     "light": {
-      "brand": "#3B82F6",
+      "brand": "#4f1e99",
       "heading": "undefined",
       "text": "undefined"
     },
     "dark": {
-      "brand": "#87B1F6",
+      "brand": "#4f1e99",
       "heading": "undefined",
       "text": "undefined"
     }
@@ -120,5 +120,8 @@
         ]
       }
     ]
-  }
+  },
+  "logo-dark": "https://blob-cdn.documentation.ai/org-a829270c-4408-45aa-90cb-a8cad2967955/doc-82f0e261-4f6b-45af-9f00-b0b805bf07d2/1769549154960-ne9vfdpu12-df_square.png?q=85&fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-a829270c-4408-45aa-90cb-a8cad2967955/doc-82f0e261-4f6b-45af-9f00-b0b805bf07d2/1769549154960-ne9vfdpu12-df_square.png?q=85&fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-a829270c-4408-45aa-90cb-a8cad2967955/doc-82f0e261-4f6b-45af-9f00-b0b805bf07d2/1769549154960-ne9vfdpu12-df_square.png?q=85&fm=auto&auto=compress%2Cformat"
 }
