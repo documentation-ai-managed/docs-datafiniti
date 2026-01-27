@@ -1,0 +1,28 @@
+---
+title: Download Errors
+description: Fix download issues with Datafiniti datasets.
+---
+
+## Problem
+
+- Data download fails
+- Error: "Download not available" or "Timed out"
+
+## Common Causes
+
+- API quota limit reached
+- Network interruptions
+
+## Quick Fix
+
+<Steps>
+  <Step title="Check API usage/quota">
+    ````bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" https://api.datafiniti.co/account/usage
+    ````
+    Ensure you have sufficient quota.
+  </Step>
+  <Step title="Retry later">
+    Wait 5 minutes, then reinitiate the download request.
+  </Step>
+</Steps>

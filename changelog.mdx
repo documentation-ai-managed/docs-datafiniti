@@ -1,0 +1,131 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Datafiniti, including new features and bug fixes.
+---
+
+## Recent Updates
+
+Stay informed about the latest releases. Check this page regularly for new features, improvements, and fixes.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time data synchronization for product catalogs
+- Introduced advanced filtering options in the search API
+- New dashboard widgets for monitoring data quality metrics
+
+## Improvements
+
+- Enhanced performance of bulk data imports by 40%
+- Updated UI components with better accessibility support
+
+## Bug Fixes
+
+- Fixed intermittent failures in webhook deliveries
+- Resolved issue with duplicate entries in dataset exports
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Support for custom data schemas in API payloads
+- Integrated analytics reports export to CSV and PDF
+
+## Bug Fixes
+
+- Corrected pagination errors in large result sets
+- Fixed validation errors for malformed JSON inputs
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core product data aggregation engine
+- RESTful API endpoints for search and enrichment
+- Initial dashboard for data visualization
+
+## Breaking Changes
+
+- Updated API versioning from `/v0` to `/v1`
+- Changed default response format to include `data` wrapper
+
+</Update>
+
+## Key Changes Summary
+
+Review major enhancements across recent releases:
+
+<Columns cols={2}>
+  <Card title="Performance Boosts" icon="zap" href="#recent-updates">
+    Bulk operations now process `<10x>` faster with optimized indexing.
+  </Card>
+  <Card title="API Enhancements" icon="code" href="#recent-updates">
+    New endpoints for schema management and real-time queries.
+  </Card>
+  <Card title="UI Improvements" icon="monitor" href="#recent-updates">
+    Responsive design updates and dark mode support.
+  </Card>
+  <Card title="Data Quality Tools" icon="shield" href="#recent-updates">
+    Automated validation and duplicate detection features.
+  </Card>
+</Columns>
+
+<Callout kind="alert" title="Migration Guide">
+For v1.0.0 breaking changes, update your API calls to use the new `/v1` prefix. Test in staging first.
+
+```bash
+# Old endpoint (deprecated)
+curl https://api.example.com/v0/search?q=products
+
+# New endpoint
+curl https://api.example.com/v1/search?q=products
+```
+</Callout>
+
+## Upcoming Roadmap
+
+Discover what's next for Datafiniti:
+
+<Expandable title="Q4 2024 Priorities" default-open="true">
+- AI-powered data enrichment
+- GraphQL API support
+- Multi-region data replication
+</Expandable>
+
+<Expandable title="2025 Features">
+- Advanced ML models for categorization
+- Enterprise SSO integration
+- Self-hosted deployment options
+</Expandable>
+
+## How to Report Issues
+
+Help us improve by reporting bugs or suggesting features.
+
+<Steps>
+  <Step title="Search Existing Issues" icon="search">
+    Check the [GitHub issues](https://github.com/example/datafiniti/issues) for similar reports.
+  </Step>
+  <Step title="Create New Issue" icon="plus">
+    Provide details: steps to reproduce, environment, and screenshots.
+  </Step>
+  <Step title="Include Logs" icon="file-text">
+    
+````bash
+# Example log snippet to include
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+  https://api.example.com/v1/search?q=laptops \
+  -v
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Subscribe to our [release notifications](https://github.com/example/datafiniti/releases) to get updates directly.
+</Callout>

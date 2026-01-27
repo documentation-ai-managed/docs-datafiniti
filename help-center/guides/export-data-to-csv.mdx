@@ -1,0 +1,21 @@
+---
+title: Export Data to CSV
+description: How to quickly export Datafiniti search results to CSV.
+---
+
+## Export Guide
+
+Export Datafiniti results as a CSV for use in spreadsheets.
+
+<Steps>
+  <Step title="Run a Search">
+    ````bash
+    curl -X POST https://api.datafiniti.co/v4/business/search \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"query": "category:restaurant", "format": "csv"}' > results.csv
+    ````
+  </Step>
+  <Step title="Open Your CSV">
+    Open `results.csv` in Excel or Google Sheets to review the data.
+  </Step>
+</Steps>

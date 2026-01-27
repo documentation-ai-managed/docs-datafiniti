@@ -1,0 +1,132 @@
+---
+title: Getting Started with Datafiniti
+description: Set up your Datafiniti account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+You need a valid email address and a modern web browser like Chrome, Firefox, or Safari. No software installation required.
+</Callout>
+
+Datafiniti makes it easy to organize your project documentation. Follow these steps to get started quickly.
+
+## Sign Up and Create Account
+
+Begin by creating your Datafiniti account.
+
+<Steps>
+  <Step title="Visit Datafiniti" icon="globe">
+    Go to the [Datafiniti signup page](https://app.datafiniti.com/signup).
+  </Step>
+  <Step title="Enter Details" icon="user">
+    Provide your email, create a password, and complete the verification process.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link to activate your account.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Save your account credentials securely. Use a password manager for best security.
+</Callout>
+
+## Create Your First Project Space
+
+Once logged in, set up your documentation space.
+
+<Steps>
+  <Step title="Access Dashboard" icon="layout-dashboard">
+    Log in at [https://app.datafiniti.com](https://app.datafiniti.com) and click **New Space**.
+  </Step>
+  <Step title="Configure Space" icon="settings">
+    Enter a name like `My Project Docs`, select visibility (public or private), and choose a template.
+  </Step>
+  <Step title="Save Space" icon="save">
+    Click **Create** to generate your space. You'll land on the editor dashboard.
+  </Step>
+</Steps>
+
+## Import Existing Documentation
+
+Datafiniti supports multiple import methods for seamless migration.
+
+<Tabs>
+  <Tab title="GitHub Repo" icon="github">
+    Connect your GitHub account and select a repository. Datafiniti pulls Markdown files automatically.
+    
+    ```bash
+    # Example: Grant repo access in Datafiniti settings
+    git clone https://github.com/your-org/project-docs.git
+    ```
+    
+    Select the branch (e.g., `main`) and import.
+  </Tab>
+  <Tab title="Markdown Files" icon="file-text">
+    Drag and drop local `.md` or `.mdx` files into the import panel.
+    
+    <CodeGroup tabs="CLI Upload">
+      ```bash
+      # Use Datafiniti CLI for bulk import
+      npm install -g @datafiniti/cli
+      datafiniti import ./docs-folder --space-id=your-space-id --api-key=YOUR_API_KEY
+      ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Google Docs" icon="file">
+    Paste Google Docs links. Datafiniti converts them to editable Markdown.
+  </Tab>
+</Tabs>
+
+## Navigate the Dashboard
+
+The dashboard provides quick access to your tools.
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor-section">
+    Create and modify pages with live preview.
+  </Card>
+  <Card title="Spaces" icon="folder" href="/introduction">
+    Manage multiple documentation projects.
+  </Card>
+  <Card title="Settings" icon="settings">
+    Configure API keys, webhooks, and themes.
+  </Card>
+</Columns>
+
+## Basic Editing and Publishing
+
+Edit content directly in the browser-based editor.
+
+<Steps>
+  <Step title="Edit Page" icon="edit">
+    Open a page, use the WYSIWYG editor or switch to Markdown mode.
+  </Step>
+  <Step title="Add Components" icon="plus">
+    Insert blocks like code snippets or images via the toolbar.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Click **Publish** to make changes live. Share the generated URL.
+  </Step>
+</Steps>
+
+```javascript
+// Example: Embed Datafiniti page in your app
+const embedUrl = 'https://docs.datafiniti.com/your-space/embed';
+iframe.src = embedUrl;
+```
+
+## Next Steps
+
+<Callout kind="success">
+Congratulations! Your first space is ready. Explore advanced features like custom domains and API integrations.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys.
+  </Card>
+  <Card title="Configuration" icon="sliders" href="/configuration">
+    Customize themes and workflows.
+  </Card>
+</Columns>

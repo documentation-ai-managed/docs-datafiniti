@@ -1,0 +1,21 @@
+---
+title: How do I get a Datafiniti API key?
+description: Learn how to obtain your Datafiniti API key for making requests.
+---
+
+## API Key Access
+
+Every Datafiniti API request requires an API key in the header.
+
+## Steps
+
+1. Log in to your Datafiniti dashboard: `https://app.datafiniti.co`
+2. Click "API Keys" in the left menu
+3. Click "Create API Key"
+4. Copy the key and store it securely
+
+## Usage Example
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://api.datafiniti.co/v4/business/search
+```
