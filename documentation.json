@@ -1,6 +1,6 @@
 {
   "name": "Datafiniti",
-  "initialRoute": "introduction",
+  "initialRoute": "property-data-with-postman",
   "colors": {
     "light": {
       "brand": "#4f1e99",
