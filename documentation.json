@@ -28,6 +28,11 @@
             "group": "Property Data",
             "pages": [
               {
+                "group": "Use Cases for Property Data",
+                "pages": [],
+                "icon": "align-center-vertical"
+              },
+              {
                 "group": "Getting Started with Property Data",
                 "pages": [
                   {
@@ -42,6 +47,11 @@
                   {
                     "title": "Property Data Schema",
                     "path": "property-data-schema"
+                  },
+                  {
+                    "title": "Possible Value for Property Data",
+                    "path": "possible-value-for-property-data",
+                    "icon": "book-open-text"
                   }
                 ],
                 "icon": "file-badge2"
