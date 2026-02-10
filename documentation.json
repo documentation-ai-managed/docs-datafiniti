@@ -22,32 +22,34 @@
           {
             "group": "Getting Started",
             "icon": "rocket",
-            "pages": [
-              {
-                "title": "Property Data with Postman",
-                "path": "property-data-with-postman"
-              }
-            ]
+            "pages": []
           },
           {
-            "group": "Core Concepts",
-            "icon": "layers",
+            "group": "Property Data",
             "pages": [
               {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
-              }
-            ]
-          },
-          {
-            "group": "Advanced",
-            "icon": "grid",
-            "pages": [
+                "group": "Getting Started with Property Data",
+                "pages": [
+                  {
+                    "title": "Property Data with Postman",
+                    "path": "property-data-with-postman"
+                  }
+                ]
+              },
               {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "package"
+                "group": "Property Data Schema",
+                "pages": [
+                  {
+                    "title": "Property Data Schema",
+                    "path": "property-data-schema"
+                  }
+                ],
+                "icon": "file-badge2"
+              },
+              {
+                "group": "API Features",
+                "pages": [],
+                "icon": "activity-square"
               }
             ]
           }
